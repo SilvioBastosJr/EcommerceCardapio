@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&M Burguer</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+   <header>
+    <div class="box-topo">
+        <img src="./img/hamb-1.png" alt="Logo S&M burguer">
+        <h1>S&M Burguer</h1>
+        <span>Rua Dev 12, Salvador - BA</span>
+
+        <div id="dataSpan" class="estabelecimentoAberto">
+          <span>Seg á Dom - 17:00 ás 23:00 </span>
+        </div>
+    </div>
+   </header>
+   <main>
+     <section class="titulo-menu">
+        <h2>Conheça nosso menu</h2>
+     </section>
+     <section id="menu">
+        <div class="container-cardapio">
+          <div class="cardapio">
+            <img src="./img/hamb-1.png" alt="Hamburguer Smash">
+
+            <div class="descricao-pedido">
+              <h3>Smash Costela duplo</h3>
+              <p class="descricao-burguer">Pão italiano, 2 carnes de costela 160g, queijo prato, bacon, alface e maionese da casa.</p>
+
+              <div class="box-add">
+                <p class="preco">R$ 18.90</p>
+                <button class="add-carrinho" data-name="Hamburguer Smash duplo" data-price="18.90">
+                  <i class='bx bxs-cart-add'></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cardapio">
+            <img src="./img/hamb-2.png" alt="Cheddar duplo">
+
+            <div class="descricao-pedido">
+              <h3>Smash Cheddar duplo</h3>
+              <p class="descricao-burguer">Pão italiano, 2 carnes de costela 160g, cheddar cremoso, bacon, molho barbecue.</p>
+
+              <div class="box-add">
+                <p class="preco">R$ 24.90</p>
+                <button class="add-carrinho" data-name="Smash Cheddar duplo" data-price="24.90">
+                  <i class='bx bxs-cart-add'></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cardapio">
+            <img src="./img/hamb-3.png" alt="Cheddar Cremoso">
+
+            <div class="descricao-pedido">
+              <h3> Smash Cheddar cremoso duplo</h3>
+              <p class="descricao-burguer">Pão italiano, 2 carnes de costela 160g, queijo cheddar, bacon, alface e maionese da casa.</p>
+
+              <div class="box-add">
+                <p class="preco">R$ 26.90</p>
+                <button class="add-carrinho" data-name="Smash Cheddar cremoso duplo" data-price="26.90">
+                  <i class='bx bxs-cart-add'></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cardapio">
+            <img src="./img/hamb-4.png" alt="chicken salad">
+
+            <div class="descricao-pedido">
+              <h3>Smash chicken salad</h3>
+              <p class="descricao-burguer">Pão italiano com gergelin, 1 frango de 160g, queijo cheddar, salada e molho da casa</p>
+
+              <div class="box-add">
+                <p class="preco">R$ 16.90</p>
+                <button class="add-carrinho" data-name="Smash chicken salad" data-price="16.90">
+                  <i class='bx bxs-cart-add'></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div class="titulo-bebidas">
+         <h2>Bebidas</h2>
+       </div>
+       <div class="grid-bebidas" id="menu">
+        <div class="cardapio">
+          <img src="./img/refri-1.png" alt="Coca lata">
+
+          <div class="descricao-pedido">
+            <h3>Coca lata</h3>
+            
+            <div class="box-add">
+              <p class="preco">R$ 6.00</p>
+              <button class="add-carrinho" data-name="Coca lata" data-price="6.00">
+                <i class='bx bxs-cart-add'></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cardapio">
+          <img src="./img/refri-2.png" alt="Guaraná lata">
+
+          <div class="descricao-pedido">
+            <h3>Guaraná lata</h3>
+            
+            <div class="box-add">
+              <p class="preco">R$ 4.50</p>
+              <button class="add-carrinho" data-name="Guaraná lata" data-price="4.50">
+                <i class='bx bxs-cart-add'></i>
+              </button>
+            </div>
+          </div>
+        </div>
+       </div>
+     </section>
+   </main>
+   <section id="modal-carrinho" class="container-modal">
+     <div class="box-modal">
+       <h2>Meu Carrinho</h2>
+
+       <div id="itens-carrinho" class="itens-carrinho"></div>
+
+       <p>Total: <span id="total-carrinho">0.00</span></p>
+       
+       <p>Endereço de entrega:</p>
+       <input type="text" placeholder="Digite seu endereço completo" id="endereco"/>
+
+       <p id="endereco-errado" class="endereco-errado">Por favor! Digite seu endereço completo.</p>
+
+       <div class="botoes-modal">
+         <button id="btn-fechar-modal" class="btn-fechar-modal">Fechar</button>
+         <button id="checkout-btn" class="checkout-btn">Finalizar pedido</button>
+       </div>
+     </div>
+   </section>
+   <footer>
+     <button id="cart-btn">
+       (<span id="cart-count">0</span>)
+       Ver meu carrinho
+       <i class='bx bxs-cart-add'></i>
+     </button>
+   </footer>
+
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   <script src="./js/script.js"></script>
+</body>
+</html>
