@@ -139,8 +139,9 @@ button .bxs-cart-add{
 .titulo-bebidas h2{
     font-size: 4rem;
     font-weight: bold;
-    margin-bottom: 2rem;
-    text-align: center;
+    width: 128rem;
+    
+    margin: 0 auto 3rem auto;
 }
 .grid-bebidas{
     display: grid;
@@ -149,7 +150,6 @@ button .bxs-cart-add{
     max-width: 1280px;
     margin: 0 auto 8rem auto;
     z-index: 1;
-    border: .2rem solid red;
 }
 .container-modal{
     position: fixed;
